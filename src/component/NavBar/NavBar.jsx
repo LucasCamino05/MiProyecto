@@ -1,4 +1,5 @@
 import './NavBar.css';
+import {Cart} from './Cart.js';
 
 export const NavBar = () => {
   return (
@@ -11,7 +12,7 @@ export const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#" >Inicio <span className="sr-only"></span></a>
+            <a className="nav-link" href="#">Inicio<span className="sr-only"></span></a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Menú</a>
@@ -24,7 +25,7 @@ export const NavBar = () => {
           <div>
             <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
             <button className="btn btn-dark my-2 my-sm-0 rounded-0" type="submit">Buscar</button>
-            <a href="#" className='nav-link'><i className='bx bx-border-circle bx-cart-alt bx-sm bx-tada-hover boton_carrito'></i></a>
+            <a href="#" className='nav-link'><Cart/></a>
           </div>
         </form>
       </div>
