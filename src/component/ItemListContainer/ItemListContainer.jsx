@@ -1,5 +1,7 @@
-export const ItemListContainer = ({greetings})=>{
+import {Count} from '../ItemCount/ItemCount.jsx'; 
+
+export const ItemListContainer = ({initial, stock, onAdd})=>{
         return(
-            <h1>{greetings}</h1>
+            <Count initial={0} stock={6}/>
         )
 }
