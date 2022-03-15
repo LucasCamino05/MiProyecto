@@ -5,38 +5,33 @@ export const ItemList = () => {
     const [listaProductos, setListaProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     const Productos = [
-        {id: 0, title:'Axe', descripcion:'Chocolate'},
-        {id: 1, title:'Axe', descripcion:'Vainilla'},
-        {id: 2, title:'Axe', descripcion:'Street'},
-        {id: 3, title:'Axe', descripcion:'Black'},
-        {id: 4, title:'Axe', descripcion:'Canela'},
-        {id: 5, title:'Axe', descripcion:'Chicito'}
+        {id: 0, titulo:'Axe', descripcion:'Chocolate'},
+        {id: 1, titulo:'Axe', descripcion:'Vainilla'},
+        {id: 2, titulo:'Axe', descripcion:'Street'},
+        {id: 3, titulo:'Axe', descripcion:'Black'},
+        {id: 4, titulo:'Axe', descripcion:'Canela'},
+        {id: 5, titulo:'Axe', descripcion:'Chicito'}
     ]
 
     const getProducts = new Promise((resolve, reject) => {
-        let condition = true;
-
-        if (condition){
-            setTimeout(() => {
-                resolve(Productos)
-            }, 5000)
-        }
-        else{
-            reject('No funciono! - Error')
-        }
+        setTimeout(() => {
+            resolve(Productos)
+        }, 5000)
     })
+
     useEffect(()=>{
         getProducts
         .then((respuesta)=> setListaProductos(respuesta))
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
     },[])
-    console.log(getProducts);
 
+    console.log(getProducts);
+    console.log(listaProductos);
     return (
         <div>
             <h1>Lista de Cokemones</h1>
-            {loading ? <p>Cargando...</p> : listaProductos.map((Productos) => <Item card={card} producto={Productos} key={Productos.id}/>)}
+            {loading ? <p>Cargando...</p> : listaProductos.map((Productos) => {return (<Item {...Productos} key={listaProductos.id}/>)})}
         </div>
     )
 }

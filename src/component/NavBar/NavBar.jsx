@@ -21,7 +21,7 @@ export const NavBar = () => {
             <a className="nav-link" href="#">Carrito</a>
           </li>
         </ul>
-        <form classNameName="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0">
           <div>
             <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
             <button className="btn btn-dark my-2 my-sm-0 rounded-0" type="submit">Buscar</button>

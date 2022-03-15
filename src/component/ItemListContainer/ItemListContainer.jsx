@@ -10,7 +10,7 @@ export const ItemListContainer = ({initial, stock, onAdd})=>{
         <>
             <div>
                 <h1>
-                    
+                    <ItemList/>
                 </h1>
             </div>
         </>
