@@ -1,7 +1,19 @@
-import {Count} from '../ItemCount/ItemCount.jsx'; 
+import {useState, useEffect} from "react";
+import {Count} from '../ItemCount/ItemCount.jsx';
+import {ItemList} from '../ItemList/ItemList';
+import {useFetch} from '../DataCall/DataCall';
 
 export const ItemListContainer = ({initial, stock, onAdd})=>{
-        return(
-            <Count initial={0} stock={6}/>
-        )
+    const URLJSON = '../DataBase/Json/Datos';
+    const data = useFetch(URLJSON);
+
+    return(
+        <>
+            <div>
+                <h1>
+                    {nombre}
+                </h1>
+            </div>
+        </>
+    )
 }

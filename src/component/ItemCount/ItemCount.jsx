@@ -16,8 +16,8 @@ export const Count = ({initial, stock, onAdd}) => {
     }
     
     return(
-        <div>
-            <div>
+        <div className='container'>
+            <div className='container'>
                 <button type='button' className='btn btn-light btn-outline-dark' onClick={restarCarrito}>  -  </button>
                 <span> {inicial} </span>
                 <button type='button' className='btn btn-light btn-outline-dark' onClick={sumarCarrito}>  +  </button>
