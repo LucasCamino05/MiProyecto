@@ -16,14 +16,14 @@ export const ItemList = () => {
     const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(Productos)
-        }, 5000)
+        }, 2000)
     })
 
     useEffect(()=>{
         getProducts
-        .then((respuesta)=> setListaProductos(respuesta))
-        .catch((error) => console.log(error))
-        .finally(()=> setLoading(false))
+            .then((respuesta)=> setListaProductos(respuesta))
+            .catch((error) => console.log(error))
+            .finally(()=> setLoading(false))
     },[])
 
     console.log(getProducts);

@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react';
 
-export const Details = (id) => {
+export const ItemDetail = (id) => {
+
     return(
         <div className='card' style='width: 18rem;'>
             <img src={pass} className='card-img-top' alt='Image Not Found'/>
