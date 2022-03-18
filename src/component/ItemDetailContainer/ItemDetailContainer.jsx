@@ -1,28 +1,40 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { Productos } from '../ItemList/ItemList';
 
 export const ItemDetailContainer = () => {
-
+    
+    const {id} = useParams()
     const [loading, setLoading] = useState([true]);
-    const [detalleProducto, setDetalleProducto] = useState([])
+    const [detalleProducto, setDetalleProducto] = useState({})
 
-    const getDetalles = new Promise((resolve, rejects)=>{
+    const getDetail = new Promise((resolve, rejects)=>{
         setTimeout(
             ()=>{
-                resolve(detalleProducto)
-            }
-        )
+                resolve(Productos)
+            },2000)
     })
+
     useEffect(() => {
         getDetail
             .then((respuesta) => setDetalleProducto(respuesta))
             .catch((error) => console.log(error))
             .finally(() => setLoading(false));
-    })
-    return
-        <>
+
+        getDetail.then((detalles) => {
+            const getId = detalles.find((e) => {
+                return e.id === Number(id)
+            })
+            setDetalleProducto({getId})
+        })
+        
+    },[id])
+
+    return(
+        <div>
             <h1>Cargando Detalle del producto</h1>
-            {loading    ? <p>Cargando...</p>
-                        : detalleProducto.find((id) => {return (<ItemDetail {...Producto}/>)})}
-        </> 
+            <ItemDetail {...getDetail}/>
+        </div>
+    )
 }

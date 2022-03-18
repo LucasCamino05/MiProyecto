@@ -1,12 +1,16 @@
-import React, {Component, useState} from 'react';
+import { React, Component, useState } from 'react';
+import { ItemCount } from '../ItemCount/ItemCount';
 
-export const ItemDetail = (id) => {
+export const ItemDetail = ({id,titulo,descripcion,precio}) => {
 
     return(
         <div className='card' style='width: 18rem;'>
-            <img src={pass} className='card-img-top' alt='Image Not Found'/>
+            {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
             <div className='card-body'>
-                <p className='card-text'> descripción del producto.</p>
+                <h1>{titulo}</h1>
+                <p className='card-text'>{descripcion}</p>
+                <span></span>
+                <ItemCount stock={20} initial={1}/>
             </div>
         </div>
     )
