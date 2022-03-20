@@ -5,8 +5,8 @@ import { Productos } from '../ItemList/ItemList';
 
 export const ItemDetailContainer = () => {
     
-    const {itemId} = useParams()
-    const [detalleProducto, setDetalleProducto] = useState({})
+    const { itemId } = useParams();
+    const [detalleProducto, setDetalleProducto] = useState({});
 
     useEffect(() => {
         const getDetalleProducto = new Promise((resolve, rejects)=>{
@@ -16,7 +16,7 @@ export const ItemDetailContainer = () => {
                 },2000)
         })
         getDetalleProducto.then((res) => {
-            setDetalleProducto(res.find((e) =>  e.id === itemId))
+            setDetalleProducto(res.find((producto) =>  producto.id === itemId))
         })
     },[])
 

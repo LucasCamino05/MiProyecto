@@ -10,10 +10,10 @@ function App() {
       {/* <NavBar/> */}
       {/* <ItemListContainer greetings={"Hola, Este es mi desafio :D"}/> */}
       <BrowserRouter>
-        <NavBar/>
+        <NavBar />
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}></Route>
-          <Route path='./Detalle/:itemId' element={<ItemDetailContainer/>}></Route>
+          <Route path='/' element={<ItemListContainer />}></Route>
+          <Route path='/component/ItemDetailContainer/:itemId' element={<ItemDetailContainer />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
