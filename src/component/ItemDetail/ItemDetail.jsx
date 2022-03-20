@@ -1,7 +1,7 @@
 import { React, Component, useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 
-export const ItemDetail = ({id,titulo,descripcion,precio}) => {
+export const ItemDetail = ({itemId,titulo,descripcion,precio}) => {
 
     return(
         <div className='card' style='width: 18rem;'>

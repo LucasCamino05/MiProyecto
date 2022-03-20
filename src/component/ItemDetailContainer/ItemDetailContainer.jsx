@@ -5,36 +5,27 @@ import { Productos } from '../ItemList/ItemList';
 
 export const ItemDetailContainer = () => {
     
-    const {id} = useParams()
-    const [loading, setLoading] = useState([true]);
+    const {itemId} = useParams()
     const [detalleProducto, setDetalleProducto] = useState({})
 
-    const getDetail = new Promise((resolve, rejects)=>{
-        setTimeout(
-            ()=>{
-                resolve(Productos)
-            },2000)
-    })
-
     useEffect(() => {
-        getDetail
-            .then((respuesta) => setDetalleProducto(respuesta))
-            .catch((error) => console.log(error))
-            .finally(() => setLoading(false));
-
-        getDetail.then((detalles) => {
-            const getId = detalles.find((e) => {
-                return e.id === Number(id)
-            })
-            setDetalleProducto({getId})
+        const getDetalleProducto = new Promise((resolve, rejects)=>{
+            setTimeout(
+                ()=>{
+                    resolve(Productos)
+                },2000)
         })
-        
-    },[id])
+        getDetalleProducto.then((res) => {
+            setDetalleProducto(res.find((e) =>  e.id === itemId))
+        })
+    },[])
 
     return(
-        <div>
-            <h1>Cargando Detalle del producto</h1>
-            <ItemDetail {...getDetail}/>
-        </div>
+        <>
+            <div>
+                <h1>Cargando Detalle del producto</h1>
+                <ItemDetail {...detalleProducto}/>
+            </div>
+        </>
     )
 }
