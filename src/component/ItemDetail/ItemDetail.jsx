@@ -4,7 +4,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 export const ItemDetail = ({itemId,titulo,descripcion,precio}) => {
 
     return(
-        <div className='card' style='width: 18rem;'>
+        <div className='card' /* style='width: 18rem;' */>
             {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
             <div className='card-body'>
                 <h1>{titulo}</h1>
