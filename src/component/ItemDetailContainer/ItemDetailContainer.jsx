@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { resolvePath, useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
-import { Productos } from '../ItemList/ItemList';
+import  URLJSON from '../DataBase/DataBase.JSON';
 
 export const ItemDetailContainer = () => {
     
@@ -9,19 +9,23 @@ export const ItemDetailContainer = () => {
     const [detalleProducto, setDetalleProducto] = useState({});
     const [loading, setLoading] = useState(true);
     
-    useEffect(() => {
-        const getDetalleProducto = new Promise((resolve, rejects)=>{
-            setTimeout(
-                ()=>{
-                    resolve(Productos)
-                },2000)
-        })
-        getDetalleProducto.then((Productos) => {
-            setDetalleProducto(Productos.find((e) =>  e.id === Number(itemId)))
-        })
-        .finally(()=> setLoading(false))
+    const getDetalleProducto = () => {
+        fetch(URLJSON)
+            .then(response => response.json())
+            .then(data => {
+                setDetalleProducto(data.find((e) => e.id === Number(itemId)))
 
+            })
+            .catch(error => console.log(error))
+            .finally(()=> setLoading(false))
+    }
+    useEffect(() => {
+        setTimeout(
+            () => {
+                getDetalleProducto();
+            },2000)
     },[])
+
     console.log(detalleProducto);
     return(
         <>

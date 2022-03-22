@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ItemDetailContainer } from './component/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
+
   return (
     <div className="App">
       {/* <NavBar/> */}
@@ -13,6 +14,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer />}></Route>
+          <Route path='/categoria/:type' element={<ItemListContainer />}></Route>
           <Route path='/detail/:itemId' element={<ItemDetailContainer />}></Route>
         </Routes>
       </BrowserRouter>
