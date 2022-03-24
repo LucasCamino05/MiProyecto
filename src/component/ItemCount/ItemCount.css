@@ -1,0 +1,4 @@
+.ButtonsDivs{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { resolvePath, useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
-import  URLJSON from '../DataBase/DataBase.JSON';
+import  URLJSON from '../database/DataBase.JSON';
 
 export const ItemDetailContainer = () => {
     

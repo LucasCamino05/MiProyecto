@@ -1,3 +1,5 @@
+@import './component/ItemDetail/ItemDetail.css';
+@import './component/NavBar/NavBar.css';
 @import './component/Item/Item.css';
 
 .App {

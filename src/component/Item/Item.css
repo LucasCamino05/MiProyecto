@@ -1,8 +1,21 @@
-.Prod-Div{
-    display: flex;
-    justify-content: center;
-}
-
 .Prod-Div img{
-    width: 20vh;
+    width: 50vh;
+}
+.CardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+.CardBody p{
+    width: 55vh;
+}
+.itemCards{
+    display: flex;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5rem;
 }

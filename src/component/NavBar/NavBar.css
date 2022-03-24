@@ -5,3 +5,10 @@ nav div {
 .NavBar_ul {
   list-style-type: none;
   text-decoration: none; }
+
+.LogoEmprendimiento{
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  text-decoration: none;
+}

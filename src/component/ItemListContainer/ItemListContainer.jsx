@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from "react-router-dom";
-import  URLJSON from '../DataBase/DataBase.JSON';
+import  URLJSON from '../database/DataBase.JSON';
 
 export const ItemListContainer = ()=>{
     const [productos, setProductos] = useState([{}]);

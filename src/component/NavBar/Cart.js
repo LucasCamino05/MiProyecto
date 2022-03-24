@@ -4,7 +4,6 @@ export const Cart = (counter) => {
     return(
         <div>
             <img src={CartImg}/>
-            <span></span>
         </div>
     )
 }
