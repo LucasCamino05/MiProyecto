@@ -1,4 +1,4 @@
-import { React, Component, useState } from 'react';
+import { React } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { motion } from 'framer-motion';
 
@@ -9,12 +9,12 @@ export const ItemDetail = ({itemId,nombre,descripcion,precio,img}) => {
             {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
             <div className='card-body itemDetail'>
                 <div>
-                    <img src={img} alt="Image not found"/>
+                    <img src={img} alt="Not Found"/>
                 </div>
                 <div>
                     <h1>{nombre}</h1>
                     <p className='card-text' style={{margin: '20px', width: '500px'}}>{descripcion}</p>
-                    <ItemCount stock={20} initial={1}/>
+                    <ItemCount stock={20} initial={1} /* onAdd={} *//>
                 </div>
             </div>
         </motion.div>

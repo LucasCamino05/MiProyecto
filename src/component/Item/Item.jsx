@@ -10,7 +10,7 @@ export const Item = ({id, nombre, img, descripcion, stock}) => {
             <motion.div className='container-fluid' animate={{y: 50}} transition={{duration: 1}}>            
                 <div className="itemCards">
                     <div className="Prod-Div">
-                        <img src={img} className="card-img-top" alt="Image Not Found"/>
+                        <img src={img} className="card-img-top" alt="Not Found"/>
                     </div>
                     <div className="card-body CardBody">
                         <h1 style={{textDecoration: 'underline'}}>{nombre}</h1>

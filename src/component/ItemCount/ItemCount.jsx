@@ -13,9 +13,15 @@ export const ItemCount = ({initial, stock, onAdd}) => {
             setInitial(inicial - 1);
         }
     }
-    
-    const handleFinalizaCompra = (finalizarCompra) => {
+    const finalizarCompra = 'hidden';
 
+    const handleFinalizaCompra = () => {
+        if (initial == 1 && inicial != 0){
+            finalizarCompra.css('visibility', 'visible');
+            console.log('entre aca')
+        }else{
+            console.log('no hice nada')
+        }
     }
 
     return(
@@ -27,8 +33,8 @@ export const ItemCount = ({initial, stock, onAdd}) => {
             </div>
             <div className='ButtonsDivs'>
                 <button type='button' className='btn btn-success btn-block' style={{margin: '20px'}} onClick={handleFinalizaCompra}>Agregar al Carrito</button>
-                <div className='finalizarCompra'>
-                    <button type='button' className='btn btn-success finalizarCompra'>Finalizar Compra</button>
+                <div className='finalizarCompra' style={{visibility: finalizarCompra}}>
+                    <button type='button' className='btn btn-success'>Finalizar Compra</button>
                 </div>
             </div>
         </div>
