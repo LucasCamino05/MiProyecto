@@ -22,20 +22,33 @@ export const ItemDetail = ({itemId,nombre,descripcion,precio,img,stock}) => {
                 <div>
                     <img src={img} alt="Not Found"/>
                 </div>
-                <div>
-                    <h1>{nombre}</h1>
+                <div className='cardSet'>
+                    <h1 style={{textDecoration: 'underline'}}>{nombre}</h1>
                     <p className='card-text' style={{margin: '20px', width: '500px'}}>{descripcion}</p>
-                    {
-                        finalizarCompra > 0 && (
-                            <div>
-                                <Link to={"/cart"}>
-                                    <button type="button" className="btn btn-primary" /* onClick={addItem} */>
-                                        Ir al Carrito
-                                    </button>
-                                </Link>
-                            </div>
-                        )
-                    }
+                    <div className='BotonesSeguirCarrito'>
+                        { 
+                            finalizarCompra > 0 && (
+                                <div>
+                                    <Link to={"/cart"}>
+                                        <button type="button" className="btn btn-light btn-outline-dark" style={{margin: '5px'}}>
+                                            Ir al Carrito
+                                        </button>
+                                    </Link>
+                                </div>
+                            )
+                        }
+                        {
+                            finalizarCompra > 0 && (
+                                <div>
+                                    <Link to={"/"}>
+                                        <button type="button" className="btn btn-light btn-outline-dark" style={{margin: '5px'}}>
+                                            Seguir comprando
+                                        </button>
+                                    </Link>
+                                </div>
+                            )
+                        }
+                    </div>
                     {!finalizarCompra && <ItemCount stock={stock} initial={1} onAdd={onAdd}/>}
                 </div>
             </div>
