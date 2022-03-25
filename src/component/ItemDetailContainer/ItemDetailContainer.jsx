@@ -23,7 +23,7 @@ export const ItemDetailContainer = () => {
         setTimeout(
             () => {
                 getDetalleProducto();
-            },2000)
+            },500)
     },[])
 
     console.log(detalleProducto);

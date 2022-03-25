@@ -1,11 +1,22 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-export const ItemDetail = ({itemId,nombre,descripcion,precio,img}) => {
+export const ItemDetail = ({itemId,nombre,descripcion,precio,img,stock}) => {
+    const [finalizarCompra, setFinalizarCompra] = useState(false);
 
+    const onAdd = (initial, stock) => {
+        if (initial <= stock) {
+            console.log(`Agregaste ${initial} producto(s) al carrito`);
+            setFinalizarCompra(true);
+        }
+        else{
+            alert("No hay stock disponible para este producto");
+        } 
+    }
     return(
-        <motion.div animate={{y: 200}} transition={{duration: 2}} className='card' /* style='width: 18rem;' */>
+        <motion.div animate={{y: '5vh'}} transition={{duration: 2}} className='card' /* style='width: 18rem;' */>
             {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
             <div className='card-body itemDetail'>
                 <div>
@@ -14,7 +25,18 @@ export const ItemDetail = ({itemId,nombre,descripcion,precio,img}) => {
                 <div>
                     <h1>{nombre}</h1>
                     <p className='card-text' style={{margin: '20px', width: '500px'}}>{descripcion}</p>
-                    <ItemCount stock={20} initial={1} /* onAdd={} *//>
+                    {
+                        finalizarCompra > 0 && (
+                            <div>
+                                <Link to={"/cart"}>
+                                    <button type="button" className="btn btn-primary" /* onClick={addItem} */>
+                                        Ir al Carrito
+                                    </button>
+                                </Link>
+                            </div>
+                        )
+                    }
+                    {!finalizarCompra && <ItemCount stock={stock} initial={1} onAdd={onAdd}/>}
                 </div>
             </div>
         </motion.div>
