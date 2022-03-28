@@ -7,14 +7,20 @@ import  URLJSON from '../database/DataBase.JSON';
 export const ItemListContainer = ()=>{
     const [productos, setProductos] = useState([{}]);
     const [loading, setLoading] = useState(true);
-    const { type } = useParams();
+    const { categoryId } = useParams();
 
     /* llamada al json */
     const getProductos = () => {
         fetch(URLJSON)
             .then(response => response.json())
             .then(data => {
-                setProductos(data);
+                if(categoryId){
+                    const productosFiltrados = data.filter(e => categoryId == e.categoriaId);
+                    setProductos(productosFiltrados);
+                    console.log(productosFiltrados);
+                }else{
+                    setProductos(data);
+                }
             })
             .catch(error => console.log(error))
             .finally(()=> setLoading(false))
@@ -24,9 +30,9 @@ export const ItemListContainer = ()=>{
         setTimeout(() => {
             getProductos();
         }, 500);
-    },[])
+    },[categoryId])
 
-    console.log(productos)
+    /* console.log(productos) */
 
     return(
         <div>

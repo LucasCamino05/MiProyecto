@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { resolvePath, useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import  URLJSON from '../database/DataBase.JSON';
+import { CartContext } from "../context/CartContext";
 
 export const ItemDetailContainer = () => {
     
     const { itemId } = useParams();
     const [detalleProducto, setDetalleProducto] = useState({});
     const [loading, setLoading] = useState(true);
+    const CartingContext = useContext(CartContext)
     
+    console.log(CartingContext);
+
     const getDetalleProducto = () => {
         fetch(URLJSON)
             .then(response => response.json())
@@ -26,7 +30,7 @@ export const ItemDetailContainer = () => {
             },500)
     },[])
 
-    console.log(detalleProducto);
+    /* console.log(detalleProducto); */
     return(
         <>
             <div>

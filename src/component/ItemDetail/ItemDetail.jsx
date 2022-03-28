@@ -5,10 +5,16 @@ import { motion } from 'framer-motion';
 
 export const ItemDetail = ({itemId,nombre,descripcion,precio,img,stock}) => {
     const [finalizarCompra, setFinalizarCompra] = useState(false);
-
-    const onAdd = (initial, stock) => {
-        if (initial <= stock) {
-            console.log(`Agregaste ${initial} producto(s) al carrito`);
+    const [producto, setProducto] = useState({
+        nombre: '',
+        inicial: '',
+        precio: '',
+        id: '',
+        img: '',
+    })
+    const onAdd = (inicial, stock) => {
+        if (inicial <= stock) {
+            /* console.log(`Agregaste ${inicial} producto(s) al carrito`); */
             setFinalizarCompra(true);
         }
         else{
