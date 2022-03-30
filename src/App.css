@@ -1,6 +1,7 @@
 @import './component/ItemDetail/ItemDetail.css';
 @import './component/NavBar/NavBar.css';
 @import './component/Item/Item.css';
+@import './component/Cart/Cart.css';
 
 .App {
   text-align: center;

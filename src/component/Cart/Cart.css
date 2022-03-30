@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.PadreCarrito{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cardProductoCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

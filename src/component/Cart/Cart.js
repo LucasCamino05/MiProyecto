@@ -24,20 +24,26 @@ export const Cart = () => {
     else{
         return (
             <>
+                <div className='PadreCarrito'>
                 {
                     cart.map((prod) => (
-                        <div>
+                        <div className='cardProductoCarrito'>
                             <div className='card' style={{width: '18rem'}} key={prod.id}>
                                 <img src={prod.img} className='card-img-top' alt='Not Found'/>
                                 <div className='card-body'>
                                     <h3>{prod.nombre}</h3>
                                     <p className='card-text'>{prod.descripcion}</p>
-                                    <p className='card-text'>${prod.precio * prod.cantidad}</p>
+                                    <p className='card-text'>Cantidad: {prod.cantidad}</p>
+                                    <p className='card-text'>Precio:${prod.precio * prod.cantidad}</p>
+                                </div>
+                                <div>
+                                    <button type='button' className='btn btn-danger'>Eliminar</button>
                                 </div>
                             </div>
                         </div>
                     ))
                 }
+                </div>
             </>
         )
     }
