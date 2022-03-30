@@ -1,21 +1,24 @@
-import { React, useState } from 'react';
+import { React, useContext, useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { CartContext } from '../../context/CartContext';
 
-export const ItemDetail = ({itemId,nombre,descripcion,precio,img,stock}) => {
+export const ItemDetail = ({id,nombre,descripcion,precio,img,stock}) => {
     const [finalizarCompra, setFinalizarCompra] = useState(false);
-    const [producto, setProducto] = useState({
-        nombre: '',
-        inicial: '',
-        precio: '',
-        id: '',
-        img: '',
-    })
-    const onAdd = (inicial, stock) => {
-        if (inicial <= stock) {
-            /* console.log(`Agregaste ${inicial} producto(s) al carrito`); */
+    const { AgregarAlCarritoCondicional } = useContext(CartContext);
+
+    const onAdd = (cantidad, stock,id,nombre,descripcion,precio,img) => {
+        if (cantidad <= stock) {
             setFinalizarCompra(true);
+
+            const addItem = {
+                id, nombre, descripcion, precio, img, stock, cantidad
+            }
+
+           /*  console.log(addItem) */
+            AgregarAlCarritoCondicional(addItem,id,cantidad);
+
         }
         else{
             alert("No hay stock disponible para este producto");

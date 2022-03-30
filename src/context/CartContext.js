@@ -2,28 +2,33 @@ import { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext();
 
-export const CartProvider = useContext(CartContext);
+export const useCartProvider = () => useContext(CartContext);
 
-export const Cart = ({children}) => {
+export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
+    const [contadorCarrito, setContadorCarrito] = useState(0)
 
     const AgregarAlCarritoCondicional = (item,id,cantidad) => {
         if(cart !== ''){
             if (cart.some((prod) => prod.id === id)){
                 cart.find((prod) => prod.id === id)
                     cart[id].cantidad = cart[id].cantidad + cantidad;
-                    console.log('entre al find del cart.');
-                    console.log(item.cantidad);
+                    setContadorCarrito(contadorCarrito + cantidad)
+/*                  console.log('entre al find del cart.');
+                    console.log(cart); */
             }
             else{
                 setCart([...cart, item]);
-                console.log('entre aca. If y luego Else')
+                setContadorCarrito(contadorCarrito + cantidad)
+/*              console.log('entre aca. If y luego Else')
+                console.log(item, cart) */
             }
         }
         else{
             setCart([...cart, item])
-            console.log('entre aca. Nunca entre al If, entonces vine pal Else.')
+            setContadorCarrito(contadorCarrito + cantidad)
+/*          console.log('entre aca. Nunca entre al If, entonces vine pal Else.') */
         }
     }
 
@@ -33,10 +38,6 @@ export const Cart = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{
-            
-        }}>
-            {children}
-        </CartContext.Provider>
+        <CartContext.Provider value={{cart,vaciarCarrito ,AgregarAlCarritoCondicional, contadorCarrito}}>{children}</CartContext.Provider>
     )
 }

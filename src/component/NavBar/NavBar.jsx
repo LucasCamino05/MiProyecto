@@ -1,12 +1,17 @@
 import './NavBar.css';
+import { useContext, useState } from 'react';
 import {ImgCart} from './ImgCart.js';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 export const NavBar = () => {
+  const [vaciarCarrito, setVaciarCarrito] = useState(false);
+  const { contadorCarrito } = useContext(CartContext);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div>
-        <Link to={'/'} className='LogoEmprendimiento'> Como en Casa</Link>
+        <Link to={'/'} className='LogoEmprendimiento'>Como en Casa</Link>
       </div>
       {/* <a className="navbar-brand" href="#">Como en casa</a> */}
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +36,7 @@ export const NavBar = () => {
           <div>
             <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
             <button className="btn btn-dark my-2 my-sm-0 rounded-0" type="submit">Buscar</button>
-            <a href="#" className='nav-link'><ImgCart/></a>
+            {<Link to={'/cart'}><ImgCart/> {contadorCarrito}</Link>}
           </div>
         </form>
       </div>
