@@ -1,5 +1,5 @@
 import './NavBar.css';
-import {Cart} from './Cart.js';
+import {ImgCart} from './ImgCart.js';
 import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
@@ -31,7 +31,7 @@ export const NavBar = () => {
           <div>
             <input className="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
             <button className="btn btn-dark my-2 my-sm-0 rounded-0" type="submit">Buscar</button>
-            <a href="#" className='nav-link'><Cart/></a>
+            <a href="#" className='nav-link'><ImgCart/></a>
           </div>
         </form>
       </div>

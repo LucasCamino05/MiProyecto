@@ -3,15 +3,14 @@ import {NavBar} from './component/NavBar/NavBar';
 import {ItemListContainer} from './component/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ItemDetailContainer } from './component/ItemDetailContainer/ItemDetailContainer';
-import { CartContext } from './component/context/CartContext';
+import { CartContext } from './context/CartContext';
 
 function App() {
-  const myUser = 'hola';
 
   return (
     <div className="App">
 
-      <CartContext.Provider	value={myUser}>      
+      <CartContext>      
         
         <BrowserRouter>
         
@@ -25,7 +24,7 @@ function App() {
         
         </BrowserRouter>
       
-      </CartContext.Provider>
+      </CartContext>
 
     </div>
   );
