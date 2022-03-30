@@ -14,7 +14,6 @@ export const ItemDetailContainer = () => {
             .then(response => response.json())
             .then(data => {
                 setDetalleProducto(data.find((e) => e.id === Number(itemId)))
-
             })
             .catch(error => console.log(error))
             .finally(()=> setLoading(false))

@@ -1,6 +1,6 @@
 import './NavBar.css';
 import { useContext, useState } from 'react';
-import {ImgCart} from './ImgCart.js';
+import { ImgCart } from './ImgCart.js';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 

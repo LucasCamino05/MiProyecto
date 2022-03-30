@@ -8,17 +8,15 @@ export const ItemDetail = ({id,nombre,descripcion,precio,img,stock}) => {
     const [finalizarCompra, setFinalizarCompra] = useState(false);
     const { AgregarAlCarritoCondicional } = useContext(CartContext);
 
-    const onAdd = (cantidad, stock,id,nombre,descripcion,precio,img) => {
+    const onAdd = (cantidad, stock) => {
         if (cantidad <= stock) {
             setFinalizarCompra(true);
 
             const addItem = {
                 id, nombre, descripcion, precio, img, stock, cantidad
             }
-
-           /*  console.log(addItem) */
             AgregarAlCarritoCondicional(addItem,id,cantidad);
-
+            console.log(addItem)
         }
         else{
             alert("No hay stock disponible para este producto");

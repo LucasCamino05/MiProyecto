@@ -10,8 +10,9 @@ export const CartProvider = ({children}) => {
     const [contadorCarrito, setContadorCarrito] = useState(0)
 
     const AgregarAlCarritoCondicional = (item,id,cantidad) => {
-        if(cart !== ''){
+        if(cart != ''){
             if (cart.some((prod) => prod.id === id)){
+                console.log(cart)
                 cart.find((prod) => prod.id === id)
                     cart[id].cantidad = cart[id].cantidad + cantidad;
                     setContadorCarrito(contadorCarrito + cantidad)
@@ -21,14 +22,16 @@ export const CartProvider = ({children}) => {
             else{
                 setCart([...cart, item]);
                 setContadorCarrito(contadorCarrito + cantidad)
-/*              console.log('entre aca. If y luego Else')
+/*                 console.log('entre aca. If y luego Else')
                 console.log(item, cart) */
+                console.log(cart)
             }
         }
         else{
             setCart([...cart, item])
             setContadorCarrito(contadorCarrito + cantidad)
-/*          console.log('entre aca. Nunca entre al If, entonces vine pal Else.') */
+/*             console.log('entre aca. Nunca entre al If, entonces vine pal Else.') */
+/*             console.log(cart) */
         }
     }
 
