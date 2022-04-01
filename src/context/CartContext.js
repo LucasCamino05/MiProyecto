@@ -10,7 +10,7 @@ export const CartProvider = ({children}) => {
     const [contadorCarrito, setContadorCarrito] = useState(0)
 
     const AgregarAlCarritoCondicional = (item,id,cantidad) => {
-        if(cart != ''){
+        if(cart !== ''){
             if (cart.some((prod) => prod.id === id)){
                 console.log(cart)
                 cart.find((prod) => prod.id === id)
@@ -24,7 +24,7 @@ export const CartProvider = ({children}) => {
                 setContadorCarrito(contadorCarrito + cantidad)
 /*                 console.log('entre aca. If y luego Else')
                 console.log(item, cart) */
-                console.log(cart)
+/*                 console.log(cart) */
             }
         }
         else{
@@ -40,7 +40,29 @@ export const CartProvider = ({children}) => {
         console.log('vacie el carrito');
     }
 
+    const totalCart = () => {
+        return cart.reduce(
+          (acc, product) => acc + (product.cantidad * product.precio),
+          0
+        );
+      };
+    const eliminarDeCarrito = (id) => {
+        if(cart.find((prod) => prod.id === id)){ 
+            const eliminado = cart[id].cantidad = cart[id].cantidad - 1 ;
+            setCart(eliminado);
+            setContadorCarrito(prev => prev - cart[id].cantidad)
+        }
+    }
     return (
-        <CartContext.Provider value={{cart,vaciarCarrito ,AgregarAlCarritoCondicional, contadorCarrito}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{
+
+            cart,
+            vaciarCarrito,
+            AgregarAlCarritoCondicional,
+            totalCart,
+            contadorCarrito,
+            eliminarDeCarrito
+
+        }}>{children}</CartContext.Provider>
     )
 }
