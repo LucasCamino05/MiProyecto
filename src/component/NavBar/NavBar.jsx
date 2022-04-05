@@ -23,7 +23,7 @@ export const NavBar = () => {
             <Link to={`/`} className='nav-link'>Inicio</Link>
           </li>
           <li className="nav-item active">
-            <Link to={`/categoria/Entradas`} className='nav-link'>Entradas</Link>
+            <Link to={`/categoria/Entrada`} className='nav-link'>Entradas</Link>
           </li>
           <li className="nav-item active">
             <Link to={`/categoria/Principal`} className='nav-link'>Principales</Link>

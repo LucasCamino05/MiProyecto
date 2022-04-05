@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { getBaseDatos } from '../../utils/firebase.js';
+import { collection, getDocs } from 'firebase/firestore';
 import  URLJSON from '../database/DataBase.JSON';
 
 export const ItemDetailContainer = () => {
@@ -9,7 +11,24 @@ export const ItemDetailContainer = () => {
     const [detalleProducto, setDetalleProducto] = useState({});
     const [loading, setLoading] = useState(true);
 
-    const getDetalleProducto = () => {
+    useEffect(() => {
+        const getData = async() => {
+            const query = collection(getBaseDatos, 'Items');
+            const response = await getDocs(query);
+            const dataItems = response.docs.map(doc => {return {id: doc.id, ...doc.data()}});
+            if (dataItems) {
+                setDetalleProducto(dataItems.find((e) => e.id === itemId));
+                console.log('esto es del console.log de detalles',detalleProducto);
+                setLoading(false);
+            }else{
+
+                /* setProductos(data); */
+            }
+        }
+        getData();
+    },[])
+    
+/*     const getDetalleProducto = () => {
         fetch(URLJSON)
             .then(response => response.json())
             .then(data => {
@@ -23,7 +42,7 @@ export const ItemDetailContainer = () => {
             () => {
                 getDetalleProducto();
             },500)
-    },[])
+    },[]) */
 
     /* console.log(detalleProducto); */
     return(

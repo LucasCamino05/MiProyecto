@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CartContext } from '../../context/CartContext';
 
-export const ItemDetail = ({id,nombre,descripcion,precio,img,stock}) => {
+export const ItemDetail = ({id,nombre,descripcion,precio,imagen,stock}) => {
     const [finalizarCompra, setFinalizarCompra] = useState(false);
     const { AgregarAlCarritoCondicional } = useContext(CartContext);
 
@@ -13,7 +13,7 @@ export const ItemDetail = ({id,nombre,descripcion,precio,img,stock}) => {
             setFinalizarCompra(true);
 
             const addItem = {
-                id, nombre, descripcion, precio, img, stock, cantidad
+                id, nombre, descripcion, precio, imagen, stock, cantidad
             }
             AgregarAlCarritoCondicional(addItem,id,cantidad);
             console.log(addItem)
@@ -26,8 +26,8 @@ export const ItemDetail = ({id,nombre,descripcion,precio,img,stock}) => {
         <motion.div animate={{y: '5vh'}} transition={{duration: 2}} className='card' /* style='width: 18rem;' */>
             {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
             <div className='card-body itemDetail'>
-                <div>
-                    <img src={img} alt="Not Found"/>
+                <div className="Prod-Div">
+                    <img src={imagen} alt="Not Found"/>
                 </div>
                 <div className='cardSet'>
                     <h1 style={{textDecoration: 'underline'}}>{nombre}</h1>
