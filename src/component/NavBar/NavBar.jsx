@@ -29,7 +29,7 @@ export const NavBar = () => {
             <Link to={`/categoria/Principal`} className='nav-link'>Principales</Link>
           </li>
           <li className="nav-item active">
-            <Link to={`/categoria/Postres`} className='nav-link'>Postres</Link>
+            <Link to={`/categoria/Postre`} className='nav-link'>Postres</Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

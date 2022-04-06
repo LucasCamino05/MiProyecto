@@ -15,8 +15,8 @@ export const Item = ({id, nombre, imagen, descripcion, stock}) => {
                     <div className="card-body CardBody">
                         <h1 style={{textDecoration: 'underline'}}>{nombre}</h1>
                         <p className="card-text">{descripcion}</p>
-                        <Link to={`/detail/${id}`}>Detalle</Link>
-                        <ItemCount stock={stock} initial={1}/>
+                        <Link to={`/detail/${id}`}> <button type="button" className="btn btn-primary btn-large" style={{margin: '5px'}}> Detalles </button></Link>
+                        {/* <ItemCount stock={stock} initial={1}/> */}
                     </div>
                 </div>
             </motion.div>
