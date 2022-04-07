@@ -3,7 +3,7 @@ import {  useParams } from "react-router-dom";
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { getBaseDatos } from '../../utils/firebase.js';
 import { collection, getDocs } from 'firebase/firestore';
-import  URLJSON from '../database/DataBase.JSON';
+//import  URLJSON from '../database/DataBase.JSON';
 
 export const ItemDetailContainer = () => {
     
@@ -21,8 +21,9 @@ export const ItemDetailContainer = () => {
                 console.log('esto es del console.log de detalles',detalleProducto);
                 setLoading(false);
             }else{
-
-                /* setProductos(data); */
+                return(
+                    <p> Error 404 Product Not Found</p>
+                )
             }
         }
         getData();

@@ -4,8 +4,8 @@ import { ItemList } from '../ItemList/ItemList';
 import { useParams } from "react-router-dom";
 import { getBaseDatos } from '../../utils/firebase.js';
 import { collection, getDocs } from 'firebase/firestore';
-import  URLJSON from '../database/DataBase.JSON';
-import { async } from "@firebase/util";
+// import  URLJSON from '../database/DataBase.JSON';
+// import { async } from "@firebase/util";
 
 export const ItemListContainer = ()=>{
     const [productos, setProductos] = useState([{}]);
@@ -29,18 +29,19 @@ export const ItemListContainer = ()=>{
             const dataItems = response.docs.map(doc => {return {id: doc.id, ...doc.data()}});
             //  console.log(dataItems);
             //  console.log(dataItems);
-            if (dataItems) {
+            if (categoryId !== undefined) {
                 const productosFiltrados = dataItems.filter(e => categoryId === e.categoria);
-                console.log('esto es del console.log',productosFiltrados);
-                setProductos(dataItems);
+                //console.log('esto es del console.log', productosFiltrados, ' Pd: no deberia estar acá');
+                setProductos(productosFiltrados);
                 setLoading(false);
             }else{
-
-                /* setProductos(data); */
+                setLoading(false)
+                setProductos(dataItems);
             }
         }
+        
         getData();
-    },[])
+    },[categoryId])
 /* 
     llamada al json
     const getProductos = () => {

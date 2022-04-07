@@ -37,7 +37,7 @@ export const Cart = () => {
                                         <p className='card-text'>Precio:${prod.precio * prod.cantidad}</p>
                                     </div>
                                     <div>
-                                        <button type='button' className='btn btn-danger' onClick={(prod) => eliminarDeCarrito(prod.id)}>Eliminar</button>
+                                        <button type='button' className='btn btn-danger' onClick={(cart) => eliminarDeCarrito(cart.id)}>Eliminar</button>
                                     </div>
                                 </div>
                             </div>
@@ -46,6 +46,7 @@ export const Cart = () => {
                     <div>
                         <button type='button' className='btn btn-outline-dark' onClick={vaciarCarrito}>Vaciar carrito</button>
                         <p> TOTAL A PAGAR: {totalCart()} </p>
+                        <Link to={'/cart/form'}><button type='button' className='btn btn-outline-dark'>Finalizar compra</button></Link>
                     </div>
                 </div>
             </>

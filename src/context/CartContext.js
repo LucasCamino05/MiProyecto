@@ -1,9 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext();
-
 export const useCartProvider = () => useContext(CartContext);
-
 export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
@@ -46,12 +44,10 @@ export const CartProvider = ({children}) => {
           0
         );
       };
-    const eliminarDeCarrito = (id) => {
-        if(cart.find((prod) => prod.id === id)){ 
-            const eliminado = cart[id].cantidad = cart[id].cantidad - 1 ;
-            setCart(eliminado);
-            setContadorCarrito(prev => prev - cart[id].cantidad)
-        }
+    const eliminarDeCarrito = () => { 
+            console.log('entre a eliminar carrito')
+/*             setCart(eliminado);
+            setContadorCarrito(prev => prev - cart[id].cantidad) */
     }
     return (
         <CartContext.Provider value={{
