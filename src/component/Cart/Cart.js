@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const Cart = () => {
 
-    const { cart, totalCart, vaciarCarrito, eliminarDeCarrito } = useContext(CartContext);
+    const { cart, totalCart, emptyCart, eliminarDeCarrito } = useContext(CartContext);
 
     if(cart.length === 0){
         return(
@@ -44,7 +44,7 @@ export const Cart = () => {
                         ))
                     }
                     <div>
-                        <button type='button' className='btn btn-outline-dark' onClick={vaciarCarrito}>Vaciar carrito</button>
+                        <button type='button' className='btn btn-outline-dark' onClick={emptyCart}>Vaciar carrito</button>
                         <p> TOTAL A PAGAR: {totalCart()} </p>
                         <Link to={'/cart/form'}><button type='button' className='btn btn-outline-dark'>Finalizar compra</button></Link>
                     </div>

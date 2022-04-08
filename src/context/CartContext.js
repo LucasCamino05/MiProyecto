@@ -33,8 +33,9 @@ export const CartProvider = ({children}) => {
         }
     }
 
-    const vaciarCarrito = () => {
+    const emptyCart = () => {
         setCart([]);
+        setContadorCarrito(0)
         console.log('vacie el carrito');
     }
 
@@ -53,7 +54,7 @@ export const CartProvider = ({children}) => {
         <CartContext.Provider value={{
 
             cart,
-            vaciarCarrito,
+            emptyCart,
             AgregarAlCarritoCondicional,
             totalCart,
             contadorCarrito,
