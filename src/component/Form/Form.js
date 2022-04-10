@@ -12,6 +12,7 @@ import {
     React,
     useContext
 } from 'react';
+import swal from 'sweetalert';
 import { CartContext } from '../../context/CartContext';
 import { getBaseDatos } from "../../utils/firebase";
  
@@ -32,7 +33,9 @@ export function Form() {
         const email= e.target[2].value;
         const direccion= e.target[3].value;
         const telefono= e.target[4].value;
-        const indicacionesPedido=e.target[5].value;
+        const nroTarjeta= e.target[5].value;
+        const nroClave= e.target[6].value;
+        const indicacionesPedido=e.target[7].value;
         
         const orderCollection = collection(getBaseDatos,'orders')
         const productosRef = collection(getBaseDatos, 'items')
@@ -43,6 +46,8 @@ export function Form() {
             email,
             direccion,
             telefono,
+            nroTarjeta,
+            nroClave,
             indicacionesPedido
         },
         item: {cart},
@@ -51,6 +56,11 @@ export function Form() {
         }
         console.log(newOrder)
         const refOrder =await addDoc (orderCollection, newOrder)
+        swal(
+            `Gracias por tu compra. 
+            Tu orden de compra es: ${refOrder.id} 
+            success`
+            );
         //cambiar stock
         const batch= writeBatch(getBaseDatos)
         const productCartIds = cart.map((el) => el.id)
@@ -89,7 +99,7 @@ export function Form() {
                     <label for="validationDefault01" className="form-label">Nombre</label>
                     <input type="text" className="form-control" id="validationDefault01" placeholder="Nombre" required/>
                 </div>
-                    <div className="col-md-4">
+                <div className="col-md-4">
                     <label for="validationDefault02" className="form-label">Apellido</label>
                     <input type="text" className="form-control" id="validationDefault02" placeholder="Apellido" required/>
                 </div>
@@ -100,6 +110,14 @@ export function Form() {
                 <div className="col-md-8">
                     <label for="validationDefault03" className="form-label">Dirección</label>
                     <input type="text" className="form-control" id="validationDefault03" required/>
+                </div>
+                <div className="col-md-4">
+                    <label for="validationDefault02" className="form-label">Número de Tarjeta</label>
+                    <input type="number" className="form-control" id="validationDefault02" placeholder="4XXX-XXXX-XXXX-XXX6" required/>
+                </div>
+                <div className="col-md-4">
+                    <label for="validationDefault02" className="form-label">Codigo de Seguridad</label>
+                    <input type="password" className="form-control" id="validationDefault02" placeholder="999" required/>
                 </div>
                 <div className="col-md-4">
                     <label for="validationDefault05" className="form-label">Teléfono</label>
@@ -119,7 +137,7 @@ export function Form() {
                     </div>
                 </div>
                 <div className="col-12">
-                    <button className="btn btn-primary" type="submit" >Enviar</button>
+                    <button className="btn btn-primary" type="submit">Enviar</button>
                 </div>
             </form>
         </div>
