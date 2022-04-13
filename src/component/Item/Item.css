@@ -1,21 +1,19 @@
-.Prod-Div img{
-    width: 50vh;
-}
-.CardBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Prod__Div img{
+    height: 40vh;
+    width: 40vh;
+    object-fit: cover;
     border: 1px solid;
-    border-top-right-radius: 5rem;
-    border-bottom-right-radius: 5rem;
-}
-.CardBody p{
-    width: 55vh;
+    border-radius: 1rem;
 }
 .itemCards{
-    display: flex;
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid;
-    border-radius: 5rem;
+    mask-border-width: 30vh;
+    justify-content: space-evenly;
+}
+.CardBody{
+    width: 25%;
+    height: fit-content;
 }

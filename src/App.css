@@ -3,6 +3,10 @@
 @import './component/Item/Item.css';
 @import './component/Cart/Cart.css';
 
+* {
+  background-color: rgb(175, 175, 175);
+}
+
 .App {
   text-align: center;
 }
