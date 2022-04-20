@@ -42,7 +42,7 @@ export const CartProvider = ({children}) => {
         if (cart.some(product => product.id === item.id)) {
             const remove = cart.filter((product) => product.id !== item.id);
             setCart(remove)
-            setContadorCarrito(prev => prev - item.quantity)
+            setContadorCarrito(prev => prev - item.cantidad)
         }
     }
     return (
