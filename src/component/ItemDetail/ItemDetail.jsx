@@ -16,18 +16,16 @@ export const ItemDetail = ({id,nombre,descripcion,precio,imagen,stock}) => {
                 id, nombre, descripcion, precio, imagen, stock, cantidad
             }
             AgregarAlCarritoCondicional(addItem,id,cantidad);
-            console.log(addItem)
         }
         else{
             alert("No hay stock disponible para este producto");
         } 
     }
     return(
-        <motion.div animate={{y: '5vh'}} transition={{duration: 2}} className='card' /* style='width: 18rem;' */>
-            {/* <img src={pass} className='card-img-top' alt='Image Not Found'/> */}
+        <motion.div animate={{y: '5vh'}} transition={{duration: 2}} className='card'>
             <div className='card-body itemDetail'>
                 <div className="Prod-Div">
-                    <img src={imagen} alt="Not Found"/>
+                    <img src={imagen} style={{width: '40vh', height: '40vh', objectFit: 'cover'}} alt="Not Found"/>
                 </div>
                 <div className='cardSet'>
                     <h1 style={{textDecoration: 'underline'}}>{nombre}</h1>

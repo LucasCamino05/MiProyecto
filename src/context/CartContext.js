@@ -14,29 +14,21 @@ export const CartProvider = ({children}) => {
                 cart.find((prod) => prod.id === id)
                     cart[id].cantidad = cart[id].cantidad + cantidad;
                     setContadorCarrito(contadorCarrito + cantidad)
-/*                  console.log('entre al find del cart.');
-                    console.log(cart); */
             }
             else{
                 setCart([...cart, item]);
                 setContadorCarrito(contadorCarrito + cantidad)
-/*                 console.log('entre aca. If y luego Else')
-                console.log(item, cart) */
-/*                 console.log(cart) */
             }
         }
         else{
             setCart([...cart, item])
             setContadorCarrito(contadorCarrito + cantidad)
-/*             console.log('entre aca. Nunca entre al If, entonces vine pal Else.') */
-/*             console.log(cart) */
         }
     }
 
     const emptyCart = () => {
         setCart([]);
         setContadorCarrito(0)
-        console.log('vacie el carrito');
     }
 
     const totalCart = () => {
@@ -45,21 +37,24 @@ export const CartProvider = ({children}) => {
           0
         );
       };
-    const eliminarDeCarrito = () => { 
-            console.log('entre a eliminar carrito')
-/*             setCart(eliminado);
-            setContadorCarrito(prev => prev - cart[id].cantidad) */
+      const eliminarDeCarrito = (item) =>{
+        console.log(item);
+        if (cart.some(product => product.id === item.id)) {
+            const remove = cart.filter((product) => product.id !== item.id);
+            setCart(remove)
+            setContadorCarrito(prev => prev - item.quantity)
+        }
     }
     return (
         <CartContext.Provider value={{
-
             cart,
             emptyCart,
             AgregarAlCarritoCondicional,
             totalCart,
             contadorCarrito,
             eliminarDeCarrito
-
-        }}>{children}</CartContext.Provider>
+        }}>
+            {children}
+        </CartContext.Provider>
     )
 }

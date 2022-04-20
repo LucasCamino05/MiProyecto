@@ -18,13 +18,15 @@ function App() {
           <NavBar />
         
           <Routes>
+
             <Route path='/' element={<ItemListContainer />}></Route>
             <Route path='/categoria/:categoryId' element={<ItemListContainer />}></Route>
             <Route path='/detail/:itemId' element={<ItemDetailContainer />}></Route>
             <Route path='/cart' element={<Cart/>}></Route>
             <Route path="/cart/form" element={<Form/>}/>
+            
           </Routes>
-        
+          
         </BrowserRouter>
       </CartProvider>
 

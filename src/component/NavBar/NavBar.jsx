@@ -1,11 +1,10 @@
 import './NavBar.css';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ImgCart } from './ImgCart.js';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 export const NavBar = () => {
-  const [vaciarCarrito, setVaciarCarrito] = useState(false);
   const { contadorCarrito } = useContext(CartContext);
 
   return (
@@ -13,10 +12,7 @@ export const NavBar = () => {
       <div>
         <Link to={'/'} className='LogoEmprendimiento'>Como en Casa</Link>
       </div>
-      {/* <a className="navbar-brand" href="#">Como en casa</a> */}
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      </button>
-
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
@@ -43,5 +39,3 @@ export const NavBar = () => {
     </nav>
   )
 }
-/* estructuring */
-/* estados y ciclos de vida */

@@ -33,27 +33,24 @@ export function Form() {
         const email= e.target[2].value;
         const direccion= e.target[3].value;
         const telefono= e.target[4].value;
-        const nroTarjeta= e.target[5].value;
-        const nroClave= e.target[6].value;
-        const indicacionesPedido=e.target[7].value;
-        
+        const indicacionesPedido=e.target[5].value;
         const orderCollection = collection(getBaseDatos,'orders')
         const productosRef = collection(getBaseDatos, 'items')
         const newOrder = {
-        buyer:{
-            nombre,
-            apellido,
-            email,
-            direccion,
-            telefono,
-            nroTarjeta,
-            nroClave,
-            indicacionesPedido
-        },
-        item: {cart},
-        total:totalCart(),
-        date:Timestamp.fromDate(new Date())
+            buyer:{
+                nombre,
+                apellido,
+                email,
+                direccion,
+                telefono,
+                indicacionesPedido
+            },
+            item: {cart},
+            total:totalCart(),
+            date:Timestamp.fromDate(new Date())
         }
+        console.log(cart)
+        console.log(cart.cantidad)
         console.log(newOrder)
         const refOrder =await addDoc (orderCollection, newOrder)
         swal(
@@ -70,11 +67,13 @@ export function Form() {
         
         productos.docs.forEach((doc) => {
             const item = cart.find((el) => el.id === doc.id)
-
-            if (doc.data().stock >= item.count) {
+            console.log(item);
+            console.log(doc.data)
+            if (doc.data().stock >= item.cantidad) {
                 batch.update(doc.ref, {
-                    stock: doc.data().stock - item.count
+                    stock: doc.data().stock - item.cantidad
                 })
+                console.log(doc.stock);
             } else {
                 outOfStock.push(item)
             }
@@ -110,14 +109,6 @@ export function Form() {
                 <div className="col-md-8">
                     <label for="validationDefault03" className="form-label">Dirección</label>
                     <input type="text" className="form-control" id="validationDefault03" required/>
-                </div>
-                <div className="col-md-4">
-                    <label for="validationDefault02" className="form-label">Número de Tarjeta</label>
-                    <input type="number" className="form-control" id="validationDefault02" placeholder="4XXX-XXXX-XXXX-XXX6" required/>
-                </div>
-                <div className="col-md-4">
-                    <label for="validationDefault02" className="form-label">Codigo de Seguridad</label>
-                    <input type="password" className="form-control" id="validationDefault02" placeholder="999" required/>
                 </div>
                 <div className="col-md-4">
                     <label for="validationDefault05" className="form-label">Teléfono</label>

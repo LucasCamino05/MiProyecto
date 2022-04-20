@@ -10,7 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     border: 1px solid;
-    mask-border-width: 30vh;
     justify-content: space-evenly;
 }
 .CardBody{
