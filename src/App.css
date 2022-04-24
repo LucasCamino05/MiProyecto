@@ -2,7 +2,9 @@
 @import './component/NavBar/NavBar.css';
 @import './component/Item/Item.css';
 @import './component/Cart/Cart.css';
-
+@import './component/Title/Title.css';
+@import './component/Footer/Footer.css';
+@import './component/Nosotros/Nosotros.css';
 .App {
   text-align: center;
 }

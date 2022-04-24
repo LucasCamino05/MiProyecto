@@ -67,26 +67,24 @@ export function Form() {
         
         productos.docs.forEach((doc) => {
             const item = cart.find((el) => el.id === doc.id)
-            console.log(item);
-            console.log(doc.data)
+    
             if (doc.data().stock >= item.cantidad) {
                 batch.update(doc.ref, {
                     stock: doc.data().stock - item.cantidad
                 })
-                console.log(doc.stock);
             } else {
                 outOfStock.push(item)
             }
         })
     
         if (outOfStock.length === 0) {
-            addDoc(orderCollection, newOrder)
+            addDoc(orderCollection, sendOrder)
                 .then((doc) => {
                     batch.commit()
+                    //setOrderId(doc.id)
                     emptyCart()
                 })
-        } 
-        else {
+        } else {
             alert("Hay items sin stock")
         }
    }

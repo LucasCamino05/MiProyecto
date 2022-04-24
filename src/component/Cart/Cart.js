@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { motion } from 'framer-motion';
 
-export const Cart = (number) => {
+export const Cart = () => {
 
     const { cart, totalCart, emptyCart, eliminarDeCarrito } = useContext(CartContext);
 
     if(cart.length === 0){
         return(
-            <motion.div animate={{y: '50%'}} transition={{duration: 1}} className='card text-center'>
+            <motion.div animate={{y: '33.5%'}} transition={{duration: 1}} className='card text-center CartBody'>
                 <div className='card-header'>
                     ¡Finalizar Compra!
                 </div>
                 <div className='card-body'>
                     <h1 className='card-title'>¡Tu Carrito esta Vacio!</h1>
                     <hr/>
-                    <Link to={'/'}><button type='button' className='btn btn-outline-primary'>Visita Nuestro Menú</button></Link>
+                    <Link to={'/store'}><button type='button' className='btn Buttons'>Visita Nuestro Menú</button></Link>
                 </div>
             </motion.div>
         )
@@ -24,7 +24,7 @@ export const Cart = (number) => {
     else{
         return (
             <>
-                <div className='PadreCarrito'>
+                <div className='PadreCarrito CartBody'>
                     {
                         cart.map((prod) => (
                             <div className='cardProductoCarrito' key={prod.id}>

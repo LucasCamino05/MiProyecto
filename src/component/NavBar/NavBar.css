@@ -1,15 +1,23 @@
 nav div {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .NavBar_ul {
   list-style-type: none;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .LogoEmprendimiento{
   padding: 5px;
   color: rgb(0, 0, 0);
   font-size: xx-large;
   text-decoration: none;
-  background-color: white;
+}
+.contadorCarritoStyle{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }

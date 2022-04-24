@@ -1,0 +1,13 @@
+.FooterStyles{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0%;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(169, 169, 169);
+}
+.FooterListStyle{
+    display: flex;
+    align-items: center;
+}

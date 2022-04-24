@@ -29,9 +29,12 @@ export const ItemListContainer = ()=>{
     },[categoryId])
 
     return(
-        <div>
+        <div className="CuerpoTienda" style={{heigth: '30vh'}}>
             {loading
-                ? <h1>Cargando sus productos</h1>
+                ?   <div className="d-flex align-items-center justify-content-evenly h-100" style={{heigth: '30vh'}}>
+                        <strong style={{fontSize: 'Large'}}>Loading...</strong>
+                        <div className="spinner-border" role="status"></div>
+                    </div>
                 : (<motion.div animate={{y: 20}}> <ItemList Productos={productos}/> </motion.div>)}
         </div>
     )

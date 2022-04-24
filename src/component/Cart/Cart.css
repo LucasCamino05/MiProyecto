@@ -13,3 +13,6 @@
     flex-direction: row;
     justify-content: center;
 }
+.CartBody{
+    height: 82.3vh;
+}
