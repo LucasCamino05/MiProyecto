@@ -22,7 +22,7 @@ export const ItemDetail = ({id,nombre,descripcion,precio,imagen,stock}) => {
         } 
     }
     return(
-        <motion.div animate={{x: '3vh'}} transition={{duration: 3}} className='card DetailBody'>
+        <motion.div className='card DetailBody'>
             <div className='card-body itemDetail'>
                 <div className="Prod-Div">
                     <img src={imagen} style={{width: '40vh', height: '40vh', objectFit: 'cover'}} alt="Not Found"/>
@@ -37,7 +37,7 @@ export const ItemDetail = ({id,nombre,descripcion,precio,imagen,stock}) => {
                             finalizarCompra > 0 && (
                                 <div>
                                     <Link to={"/cart"}>
-                                        <button type="button" className="btn btn-light Buttons" style={{margin: '5px'}}>
+                                        <button type="button" className="btn Buttons" style={{margin: '5px'}}>
                                             Ir al Carrito
                                         </button>
                                     </Link>
@@ -48,7 +48,7 @@ export const ItemDetail = ({id,nombre,descripcion,precio,imagen,stock}) => {
                             finalizarCompra > 0 && (
                                 <div>
                                     <Link to={"/store"}>
-                                        <button type="button" className="btn btn-light Buttons" style={{margin: '5px'}}>
+                                        <button type="button" className="btn Buttons" style={{margin: '5px'}}>
                                             Seguir comprando
                                         </button>
                                     </Link>

@@ -3,16 +3,44 @@
     margin: 0;
     padding: 0;
 }
+
 .PadreCarrito{
     display: flex;
+    height: 84.3vh;
+    align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 .cardProductoCarrito{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    height: 50%;
+}
+.CardProductoStyle{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.CardBodyDescription{
+    margin-left: 10vh;
+    display: flex;
+    align-items: center;
+}
+.CardDescriptionText{
+    width: 50vh;
+    height: auto;
+}
+.ImagenCart{
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+}
+.TotalAPagar{
+    margin: 1rem;
+    font-size: large;
+    font-weight: bolder;
+}
+.CartButtons{
+    width: 30vh;
 }
 .CartBody{
-    height: 82.3vh;
+    height: 84.3;
 }

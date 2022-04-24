@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
             }
         }
         getData();
-    },[])
+    },)
 
     return(
         <>

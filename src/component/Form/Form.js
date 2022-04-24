@@ -15,6 +15,7 @@ import {
 import swal from 'sweetalert';
 import { CartContext } from '../../context/CartContext';
 import { getBaseDatos } from "../../utils/firebase";
+import { motion } from 'framer-motion';
  
  
 export function Form() {
@@ -90,7 +91,10 @@ export function Form() {
    }
    
    return (
-        <div>
+        <motion.div animate={{y: '15%'}} transition={{duration: 2.5}} className='FormBody'>
+            <div>
+                <p><h1>Completa el formulario y termina tu compra</h1></p>
+            </div>
             <form className="row g-3" onSubmit={sendOrder}>
                 <div className="col-md-4">
                     <label for="validationDefault01" className="form-label">Nombre</label>
@@ -126,9 +130,9 @@ export function Form() {
                     </div>
                 </div>
                 <div className="col-12">
-                    <button className="btn btn-primary" type="submit">Enviar</button>
+                    <button className="btn btn-large Buttons" type="submit">Enviar</button>
                 </div>
             </form>
-        </div>
+        </motion.div>
     )
 }

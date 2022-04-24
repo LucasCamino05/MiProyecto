@@ -16,12 +16,12 @@ export const ItemCount = ({initial, stock, onAdd}) => {
     return(
         <div className='container'>
             <div>
-                <button type='button' className='btn btn-light btn-outline-dark' onClick={restarCarrito}>  -  </button>
+                <button type='button' className='btn btn-outline-dark' onClick={restarCarrito}>  -  </button>
                 <span> {cantidad} </span>
-                <button type='button' className='btn btn-light btn-outline-dark' onClick={sumarCarrito}>  +  </button>
+                <button type='button' className='btn btn-outline-dark' onClick={sumarCarrito}>  +  </button>
             </div>
             <div className='ButtonsDivs'>
-                <button type='button' className='btn btn-blocks Buttons' style={{margin: '20px'}} onClick={() => onAdd(cantidad,stock)}>Agregar al Carrito</button>
+                <button type='button' className='btn CartButtons' style={{margin: '20px', backgroundColor: 'rgb(250,87,51)'}} onClick={() => onAdd(cantidad,stock)}>Agregar al Carrito</button>
             </div>
         </div>
     )
