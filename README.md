@@ -14,8 +14,8 @@ Para aprender a hacer eso podemos seguir: [Clonar un repositorio de GitHub en lo
 Para poder continuar con la instalación y **deploy** local del proyecto es necesario que tengas instalado lo siguiente:
 
 * Algun IDE (Visual Studio Code, o preferencia del usuario).\
-    **Visual Studio Code** - *Como instalarlo* - [Instalación VSC](https://code.visualstudio.com/)..\
-    **SublimeText** - *Como instalarlo* - [Instalación SublimeText](https://www.sublimetext.com/)..\
+    -**Visual Studio Code** - *Como instalarlo* - [Instalación VSC](https://code.visualstudio.com/).\
+    -**SublimeText** - *Como instalarlo* - [Instalación SublimeText](https://www.sublimetext.com/).
 * NodeJs - *Como instalarlo* - [Instalación NodeJs](https://nodejs.org/es/).
 
 > Nota: verificar que este todo correctamente instalado.
