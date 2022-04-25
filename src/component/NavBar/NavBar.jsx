@@ -33,8 +33,6 @@ export const NavBar = () => {
         </ul>
         <form className='form-inline my-2 my-lg-0'>
           <div>
-            <input className='form-control mr-sm-2' type='search' placeholder='Buscar' aria-label='Buscar'/>
-            <button className='btn btn-dark my-2 my-sm-0 rounded-0' type='submit'>Buscar</button>
             {<Link to={'/cart'} className='contadorCarritoStyle'><ImgCart/>{ contadorCarrito }</Link>}
           </div>
         </form>
