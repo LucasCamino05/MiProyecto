@@ -65,3 +65,7 @@ Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](h
 * **Compañeros** - No pudieron tocar mejores compañeros, siempre ayudando e intentando que todos avancemos!. Gracias por todo.
 * **Dario Rojas** - Tutor del curso, gracias por tu buena onda y por responder a cada pregunta que tenia!.
 * **Fredy  Alexander Chaparro Castro** - Profesor del curso. Gracias por la paciencia, las explicaciones y dar las clases.
+
+### Y Agradecimiento especial
+
+* **Florencia Mazzitelly** - Es una persona que me apoyo, e hizo que siguiera avanzando en cada caida que tuve.
