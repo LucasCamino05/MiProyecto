@@ -19,9 +19,6 @@ export const Title = () =>{
                         <div>
                             <Link to={'/store'} className='btn Buttons'>Tienda</Link>
                         </div>
-                        <div>
-                            <Link to={'/nosotros'} className='btn Buttons'>Nosotros</Link>
-                        </div>
                     </div>
                 </main>
                 <article>

@@ -6,7 +6,6 @@
 
 .PadreCarrito{
     display: flex;
-    height: 84.3vh;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -40,7 +39,4 @@
 }
 .CartButtons{
     width: 30vh;
-}
-.CartBody{
-    height: 84.3;
 }
