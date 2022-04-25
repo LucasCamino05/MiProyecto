@@ -1,17 +1,13 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .PadreCarrito{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 1rem 0 5rem 0;
 }
 .cardProductoCarrito{
     display: flex;
     height: 50%;
+    margin: 16px 0 16px 0;
 }
 .CardProductoStyle{
     display: flex;

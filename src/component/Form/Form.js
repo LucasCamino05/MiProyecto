@@ -91,7 +91,7 @@ export function Form() {
    }
    
    return (
-        <motion.div animate={{y: '5%', x: '2.5%'}} transition={{duration: 2.5}} className='FormBody'>
+        <motion.div animate={{y: '5%', x: '5%'}} transition={{duration: 2.5}} className='FormBody'>
             <div>
                 <p><h1>Completa el formulario y termina tu compra</h1></p>
             </div>
@@ -122,7 +122,7 @@ export function Form() {
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"placeholder="Agrega aquí las instrucciones que necesites detallar"></textarea>
                 </div>
                 <div className="col-12">
-                    <div className="form-check col-2">
+                    <div className="form-check col-2" style={{display: 'flex'}}>
                         <input className="form-check-input mx-0" type="checkbox" value="" id="invalidCheck2" required/>
                         <label className="form-check-label p-0" for="invalidCheck2">
                             Acepto los terminos y condiciones

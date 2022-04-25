@@ -9,7 +9,7 @@ export const Cart = () => {
 
     if(cart.length === 0){
         return(
-            <motion.div animate={{y: '33.5%'}} transition={{duration: 1}} style={{height: '84.3vh'}}>
+            <motion.div animate={{y: '40%'}} transition={{duration: 1}}>
                 <div className='card-header'>
                     ¡Finalizar Compra!
                 </div>
@@ -36,7 +36,6 @@ export const Cart = () => {
                                     <div className='CardBodyDescription'>
                                         <div className='CardDescriptionText'>
                                             <h3>{prod.nombre}</h3>
-                                            <p>{prod.descripcion}</p>
                                             <p>Cantidad: {prod.cantidad}</p>
                                             <p>Precio:${prod.precio * prod.cantidad}</p>
                                         </div>
