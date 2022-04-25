@@ -63,5 +63,5 @@ Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](h
 ## Agradecimientos
 
 * **Compañeros** - No pudieron tocar mejores compañeros, siempre ayudando e intentando que todos avancemos!. Gracias por todo.
-* **Dario Rojas** - Tutor del curso, gracias por aguantarte tantas preguntas!
+* **Dario Rojas** - Tutor del curso, gracias por tu buena onda y por responder a cada pregunta que tenia!.
 * **Fredy  Alexander Chaparro Castro** - Profesor del curso. Gracias por la paciencia, las explicaciones y dar las clases.
