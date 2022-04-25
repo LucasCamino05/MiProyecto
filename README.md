@@ -4,9 +4,9 @@ Esta pagina web fue creada para el aprendizaje y aplicación de la Libreria Reac
 Se trata de un E-commerce de un Restaurant ficticio "Como en casa", de Mar del Plata.\
 
 ## Comenzando
-
+Clonar un repositorio de GitHub en local
 Para comenzar es necesario realizar una copia del repositorio completo.\
-Para aprender a hacer eso podemos seguir: [https://github.com/pablorgarcia/Guia-rapida-para-Git_tutorial-ejemplo/blob/master/README.md#clonar-un-repositorio-de-github-en-local](Clonar un repositorio de GitHub en local)
+Para aprender a hacer eso podemos seguir: [Clonar un repositorio de GitHub en local](https://github.com/pablorgarcia/Guia-rapida-para-Git_tutorial-ejemplo/blob/master/README.md#clonar-un-repositorio-de-github-en-local).
 
 # Getting Started with Create React App
 
