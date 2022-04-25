@@ -59,7 +59,6 @@ export function Form() {
             Tu orden de compra es: ${refOrder.id} 
             success`
             );
-        //cambiar stock
         const batch= writeBatch(getBaseDatos)
         const productCartIds = cart.map((el) => el.id)
         const q = query(productosRef, where(documentId(), 'in', productCartIds))
