@@ -8,9 +8,15 @@ Clonar un repositorio de GitHub en local
 Para comenzar es necesario realizar una copia del repositorio completo.\
 Para aprender a hacer eso podemos seguir: [Clonar un repositorio de GitHub en local](https://github.com/pablorgarcia/Guia-rapida-para-Git_tutorial-ejemplo/blob/master/README.md#clonar-un-repositorio-de-github-en-local).
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Pre-requisitos
+
+Para poder continuar con la instalación y **deploy** local del proyecto es necesario que tengas instalado lo siguiente:
+
+* Algun IDE (Visual Studio Code, o preferencia del usuario)
+    **Visual Studio Code** - *Como instalarlo* - [Instalación VSC](https://code.visualstudio.com/).
+    **SublimeText** - *Como instalarlo* - [Instalación SublimeText](https://www.sublimetext.com/).
+* NodeJs - *Como instalarlo* - [Instalación NodeJs](https://nodejs.org/es/).
 
 ## Available Scripts
 
