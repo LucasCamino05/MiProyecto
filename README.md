@@ -9,7 +9,7 @@ Para comenzar es necesario realizar una copia del repositorio completo.\
 Para aprender a hacer eso podemos seguir: [Clonar un repositorio de GitHub en local](https://github.com/pablorgarcia/Guia-rapida-para-Git_tutorial-ejemplo/blob/master/README.md#clonar-un-repositorio-de-github-en-local).
 
 
-### Pre-requisitos
+### Pre-requisitos 📋
 
 Para poder continuar con la instalación y **deploy** local del proyecto es necesario que tengas instalado lo siguiente:
 
@@ -19,6 +19,20 @@ Para poder continuar con la instalación y **deploy** local del proyecto es nece
 * NodeJs - *Como instalarlo* - [Instalación NodeJs](https://nodejs.org/es/).
 
 > Nota: verificar que este todo correctamente instalado.
+
+### Instalación
+
+Una vez hecho todo el **pre-requisito** podemos continuar:
+_Iniciamos el proyecto en nuestro Editor de texto_
+...
+-File
+-Open Folder **buscamos el archivo en nuestros documentos**
+...
+_Primero necesitamos instalar las dependencias que tiene el proyecto._
+...
+
+..
+
 
 ## Available Scripts
 
