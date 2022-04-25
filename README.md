@@ -60,7 +60,7 @@ Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](h
 
 * **Camino Lucas** - *Proyecto ReactJs* - [LucasCamino05](https://github.com/LucasCamino05).
 
-## Agradecimientos
+## Agradecimientos  🎁
 
 * **Compañeros** - No pudieron tocar mejores compañeros, siempre ayudando e intentando que todos avancemos!. Gracias por todo.
 * **Dario Rojas** - Tutor del curso, gracias por tu buena onda y por responder a cada pregunta que tenia!.
