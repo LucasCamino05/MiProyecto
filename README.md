@@ -46,8 +46,7 @@ Terminada la **instalación** ejecutamos el siguiente comando en la consola.
 ```
 $ npm start
 ```
-Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](http://localhost:3000) \
-en nuestro navegador.
+Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](http://localhost:3000) en nuestro navegador.
 
 ## Available Scripts
 
