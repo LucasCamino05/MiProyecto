@@ -38,6 +38,17 @@ _Instalar las dependencias que tiene el proyecto con el comando._
 $ npm install
 ```
 
+> Nota: verificar que este todo correctamente instalado.
+
+### Levantar la página
+
+Terminada la **instalación** ejecutamos el siguiente comando en la consola.
+```
+$ npm start
+```
+Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](http://localhost:3000) \
+en nuestro navegador.
+
 ## Available Scripts
 
 In the project directory, you can run:

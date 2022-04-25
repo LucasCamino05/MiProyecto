@@ -91,7 +91,7 @@ export function Form() {
    }
    
    return (
-        <motion.div animate={{y: '15%'}} transition={{duration: 2.5}} className='FormBody'>
+        <motion.div animate={{y: '5%', x: '2.5%'}} transition={{duration: 2.5}} className='FormBody'>
             <div>
                 <p><h1>Completa el formulario y termina tu compra</h1></p>
             </div>
