@@ -20,7 +20,7 @@ Para poder continuar con la instalación y **deploy** local del proyecto es nece
 
 > Nota: verificar que este todo correctamente instalado.
 
-### Instalación     🛠️
+### Instalación     ⚙️
 
 Una vez hecho todo el **pre-requisito** podemos continuar:\
 _Iniciamos el proyecto en nuestro Editor de texto:_
@@ -47,6 +47,14 @@ Terminada la **instalación** ejecutamos el siguiente comando en la consola.
 $ npm start
 ```
 Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](http://localhost:3000) en nuestro navegador.
+
+## Construido con   🛠️
+
+* HTML - [MDN - Documentación](https://developer.mozilla.org/es/docs/Web/HTML).
+* CSS - [MDN - Documentación](https://developer.mozilla.org/es/docs/Web/CSS).
+* JavaScript - [MDN - Documentación](https://developer.mozilla.org/es/docs/Web/JavaScript).
+* ReactJs - [Documentación](https://reactjs.org/).
+* Firebase - [Documentación](https://firebase.google.com/)
 
 ## Available Scripts
 
