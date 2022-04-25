@@ -9,7 +9,7 @@ Para comenzar es necesario realizar una copia del repositorio completo.\
 Para aprender a hacer eso podemos seguir: [Clonar un repositorio de GitHub en local](https://github.com/pablorgarcia/Guia-rapida-para-Git_tutorial-ejemplo/blob/master/README.md#clonar-un-repositorio-de-github-en-local).
 
 
-### Pre-requisitos 📋
+### Pre-requisitos  📋
 
 Para poder continuar con la instalación y **deploy** local del proyecto es necesario que tengas instalado lo siguiente:
 
@@ -20,18 +20,23 @@ Para poder continuar con la instalación y **deploy** local del proyecto es nece
 
 > Nota: verificar que este todo correctamente instalado.
 
-### Instalación
+### Instalación     🛠️
 
 Una vez hecho todo el **pre-requisito** podemos continuar:\
-_Iniciamos el proyecto en nuestro Editor de texto_
-
+_Iniciamos el proyecto en nuestro Editor de texto:_
 ```
 -File
--Open Folder **buscamos el archivo en nuestros documentos**
+-Open Folder buscamos el archivo en nuestros documentos
 ```
-
-_Primero necesitamos instalar las dependencias que tiene el proyecto._
-
+_Necesitamos una terminal en nuestra carpeta de trabajo:_
+```
+-Terminal
+-New Terminal seleccionamos la carpeta del proyecto
+```
+_Instalar las dependencias que tiene el proyecto con el comando._
+```
+$ npm install
+```
 
 ## Available Scripts
 
