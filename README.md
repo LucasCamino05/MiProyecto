@@ -22,16 +22,15 @@ Para poder continuar con la instalación y **deploy** local del proyecto es nece
 
 ### Instalación
 
-Una vez hecho todo el **pre-requisito** podemos continuar:
+Una vez hecho todo el **pre-requisito** podemos continuar:\
 _Iniciamos el proyecto en nuestro Editor de texto_
-...
+
+```
 -File
 -Open Folder **buscamos el archivo en nuestros documentos**
-...
-_Primero necesitamos instalar las dependencias que tiene el proyecto._
-...
+```
 
-..
+_Primero necesitamos instalar las dependencias que tiene el proyecto._
 
 
 ## Available Scripts
