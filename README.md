@@ -18,6 +18,8 @@ Para poder continuar con la instalación y **deploy** local del proyecto es nece
     **SublimeText** - *Como instalarlo* - [Instalación SublimeText](https://www.sublimetext.com/)..\
 * NodeJs - *Como instalarlo* - [Instalación NodeJs](https://nodejs.org/es/).
 
+> Nota: verificar que este todo correctamente instalado.
+
 ## Available Scripts
 
 In the project directory, you can run:
