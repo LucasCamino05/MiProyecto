@@ -68,4 +68,4 @@ Pasado unos segundos deberiamos ver una pagina con URL [http://localhost:3000](h
 
 ### Y Agradecimiento especial
 
-* **Florencia Mazzitelli** - Que me apoyo e hizo que siguiera avanzando en cada caida que tuve.
+* **Florencia Mazzitelli** - Mi novia, que me apoyo e hizo que siguiera avanzando en cada caida que tuve.
